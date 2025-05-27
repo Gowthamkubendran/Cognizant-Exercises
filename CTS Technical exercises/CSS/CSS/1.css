@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Inclusion Methods</title>
+
+  <!-- Link to external stylesheet (in real use, create styles.css and place this CSS there) -->
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Internal Styles: Page-specific styles */
+    body {
+      background-color: lightblue;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Inline style applied directly to an element -->
+  <h1 style="color: red;">This heading uses inline CSS</h1>
+
+  <!-- These elements will be styled by the external CSS (simulated below) -->
+  <h2>This heading uses external CSS</h2>
+  <p>This paragraph is styled using an external stylesheet.</p>
+
+</body>
+</html>
+
+<!-- Simulated content of styles.css (external stylesheet) -->
+<!-- 
+  styles.css
+
+  /* Header styles */
+  h2 {
+    color: navy;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+  }
+
+  /* Paragraph styles */
+  p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin: 0 20px;
+  }
+-->

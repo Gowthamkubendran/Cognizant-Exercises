@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Feedback</title>
+        <style>
+                form {
+      background: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 15px;
+    }
+
+    output {
+      display: block;
+      margin-top: 10px;
+      color: green;
+    }
+        </style>
+        <script>
+             window.onload = function () {
+      const eventType = document.getElementById("eventType");
+      const feeDisplay = document.getElementById("eventFee");
+      const feedbackBox = document.getElementById("feedback");
+      const charCount = document.getElementById("charCount");
+
+      // Restore preferred event
+      const savedType = localStorage.getItem("eventType");
+      if (savedType) {
+        eventType.value = savedType;
+      }
+
+      eventType.onchange = function () {
+        localStorage.setItem("eventType", this.value);
+        const fees = { music: "$20", art: "$15", tech: "$25" };
+        feeDisplay.textContent = "Fee: " + (fees[this.value] || "Free");
+      };
+
+      feedbackBox.onkeyup = function () {
+        charCount.textContent = "Characters: " + this.value.length;
+      };
+
+      document.getElementById("phone").onblur = function () {
+        if (!/^\d{10}$/.test(this.value)) {
+          alert("Please enter a valid 10-digit phone number.");
+        }
+      };
+
+      document.getElementById("registerForm").onsubmit = function (e) {
+        e.preventDefault();
+        document.getElementById("formOutput").textContent = "Thanks for registering!";
+      };
+    };
+        </script>
+    </head>
+    <body>
+            <!-- Registration Form -->
+    <form id="registerForm">
+      <h3>Register for an Event</h3>
+      <label>Name: <input type="text" placeholder="Your name" required autofocus></label>
+      <label>Email: <input type="email" placeholder="your@email.com" required></label>
+      <label>Date: <input type="date" required></label>
+      <label>Phone: <input type="text" id="phone" placeholder="1234567890"></label>
+      <label>Event Type:
+        <select id="eventType" required>
+          <option value="">-- Select --</option>
+          <option value="music">Music</option>
+          <option value="art">Art</option>
+          <option value="tech">Tech</option>
+        </select>
+      </label>
+      <span id="eventFee"></span>
+      <label>Message:
+        <textarea id="feedback" rows="4" placeholder="Your message..."></textarea>
+      </label>
+      <div id="charCount"></div>
+      <button type="submit">Submit</button>
+      <output id="formOutput"></output>
+    </form>
+    </body>
+</html>

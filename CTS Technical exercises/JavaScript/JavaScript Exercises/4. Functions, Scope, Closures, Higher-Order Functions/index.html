@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Community Event Portal</title>
+</head>
+<body>
+  <h1>Community Event Portal</h1>
+
+  <!-- Add Event Form -->
+  <h2>Add New Event</h2>
+  <input type="text" id="name" placeholder="Event Name" />
+  <input type="date" id="date" />
+  <input type="number" id="seats" placeholder="Seats" />
+  <input type="text" id="category" placeholder="Category" />
+  <button onclick="handleAddEvent()">Add Event</button>
+
+  <!-- Filter Events -->
+  <h2>Filter Events by Category</h2>
+  <input type="text" id="filterCategory" placeholder="Category" />
+  <button onclick="handleFilterEvents()">Filter</button>
+
+  <!-- Register -->
+  <h2>Register for Event</h2>
+  <input type="text" id="registerName" placeholder="Event Name" />
+  <button onclick="handleRegister()">Register</button>
+
+  <h2>Events List</h2>
+  <ul id="eventList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>

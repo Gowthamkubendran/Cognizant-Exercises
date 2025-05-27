@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Registration Form</title>
+  <style>
+    form {
+      max-width: 400px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .error {
+      color: red;
+      font-size: 0.9em;
+      margin-top: 4px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 12px;
+      padding: 8px 12px;
+    }
+    #successMsg {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Register for an Event</h1>
+  <form id="registrationForm" novalidate>
+    <label>
+      Name:
+      <input type="text" name="name" />
+      <div id="nameError" class="error"></div>
+    </label>
+
+    <label>
+      Email:
+      <input type="email" name="email" />
+      <div id="emailError" class="error"></div>
+    </label>
+
+    <label>
+      Select Event:
+      <select name="event">
+        <option value="">-- Select an event --</option>
+        <option value="Community Clean-Up">Community Clean-Up</option>
+        <option value="Yoga Workshop">Yoga Workshop</option>
+        <option value="Rock Concert">Rock Concert</option>
+      </select>
+      <div id="eventError" class="error"></div>
+    </label>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="successMsg"></div>
+
+  <script src="formHandler.js"></script>
+</body>
+</html>

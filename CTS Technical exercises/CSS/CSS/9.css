@@ -1,0 +1,9 @@
+ .community-bulletin {  
+    column-count: 2;          /* Number of columns */  
+    column-gap: 30px;         /* Gap between columns */  
+    column-rule: 1px solid gray; /* Vertical line between columns */  
+    background: white;  
+    padding: 20px;  
+    border-radius: 8px;  
+    border: 2px solid #ccc;  
+  } 

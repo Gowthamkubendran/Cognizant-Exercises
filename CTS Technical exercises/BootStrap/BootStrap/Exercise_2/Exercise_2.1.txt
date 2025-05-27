@@ -1,0 +1,73 @@
+A typical Bootstrap directory after downloading looks like this:
+
+bootstrap/
+├── css/
+│   ├── bootstrap.css
+│   ├── bootstrap.css.map
+│   ├── bootstrap.min.css
+│   └── bootstrap.min.css.map
+├── js/
+│   ├── bootstrap.bundle.js
+│   ├── bootstrap.bundle.min.js
+│   ├── bootstrap.js
+│   └── bootstrap.min.js
+└── icons/
+    └── (separate package if downloaded)
+
+CSS Folder
+
+Contains:
+bootstrap.css: The full, non-minified Bootstrap stylesheet with readable formatting.
+
+bootstrap.min.css: The same CSS but minified (smaller file size for faster loading).
+
+.map files: Source maps for browser developer tools to map minified code to the original.
+
+Purpose:
+Defines all style rules, including layout, typography, buttons, grids, utilities, etc.
+
+Use .min.css for production (faster load), and .css for development/debugging.
+
+JS Folder
+Contains:
+bootstrap.js: Full JavaScript for Bootstrap components (dropdowns, modals, carousels, etc.)
+
+bootstrap.min.js: Minified version for faster loading.
+
+bootstrap.bundle.js: Includes both bootstrap.js and Popper.js (required for tooltips, dropdowns).
+
+bootstrap.bundle.min.js: Minified bundle.
+
+Purpose:
+Provides functionality to Bootstrap components that require JavaScript interactivity like:
+
+Modals
+
+Carousels
+
+Tooltips
+
+Toasts
+
+Dropdowns
+
+Use bootstrap.bundle.min.js in most cases to avoid separately linking Popper.js.
+
+Icons Folder (if downloaded separately)
+Location (if using Bootstrap Icons):
+
+bootstrap-icons/
+├── bootstrap-icons.css
+├── fonts/
+│   ├── bootstrap-icons.woff
+│   └── bootstrap-icons.woff2
+
+Purpose:
+Provides scalable vector icons (SVG) usable with <i> or <span> tags.
+
+Supports hundreds of icons (e.g., social media, UI, arrows).
+
+Example:
+
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<i class="bi bi-facebook"></i>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vedio Promo</title>
+        <style>
+            section {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+        </style>
+        <script>
+            window.onload = function () {
+            document.getElementById("eventVideo").oncanplay = function () {
+        document.getElementById("videoMessage").textContent = "Video ready to play.";
+      };
+
+      window.onbeforeunload = function () {
+        return "Are you sure you want to leave without saving?";
+      };
+            };
+        </script>
+    </head>
+    <body>
+          <!-- Video Invite -->
+  <section>
+    <h2>Watch Our Promo Video</h2>
+    <video id="eventVideo" width="320" height="240" controls>
+      <source src="vedio.mp4" type="video/mp4">
+      Your browser doesn't support video playback.
+    </video>
+    <p id="videoMessage"></p>
+  </section>
+    </body>
+</html>

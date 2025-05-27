@@ -1,0 +1,46 @@
+@media (max-width: 768px) {  
+  header h1 {  
+    font-size: 6vw; /* Responsive font size */  
+  }  
+  
+  .event-list {  
+    flex-direction: column; /* Stack event cards vertically */  
+    align-items: stretch;  
+  }  
+  
+  .event-card {  
+    flex: 1 1 100%;          /* Full width on smaller screens */  
+    margin: 10px 0;  
+    font-size: 0.95rem;      /* Slightly smaller font */  
+  }  
+  
+  form {  
+    grid-template-columns: 1fr; /* Stack form fields */  
+  }  
+  
+  .container {  
+    padding: 20px 15px;     /* Responsive padding */  
+  }  
+  
+  .section h2 {  
+    font-size: 1.5rem;      /* Smaller section heading */  
+  }  
+  
+  .community-bulletin {  
+    column-count: 1;        /* Single column on small screens */  
+  }  
+}  
+  
+@media (max-width: 480px) {  
+  body {  
+    font-size: 0.9rem;      /* Smaller base font size */  
+  }  
+  
+  header {  
+    padding: 30px 15px;     /* Tighter header padding */  
+  }  
+  
+  form button {  
+    width: 100%;            /* Full-width button */  
+  }  
+} 

@@ -1,0 +1,28 @@
+ Debug and Test with Dev Tools and VS Code  
+  
+ 1. Open DevTools in Chrome  
+Open your HTML file in Chrome (right-click → Inspect, or press Ctrl+Shift+I / Cmd+Option+I).  
+  
+Click the Device Toolbar icon (top-left corner or press Ctrl+Shift+M) to toggle mobile simulation.  
+  
+ 2. Simulate Responsive Screens  
+Choose from presets (e.g., iPhone 12, Galaxy Fold) or manually set a width below 768px.  
+  
+Observe layout behavior, font scaling, and image responsiveness.  
+  
+ 3. Inspect Styles and Test Live Changes  
+Click the Elements tab in DevTools.  
+Hover over elements to highlight them in the layout.  
+Click an element (e.g., .event-card) and go to the Styles panel.  
+Here, you can:  
+Add/modify CSS live (e.g., change flex-direction, font sizes).  
+Toggle rules on/off to test their effect.  
+See which media query is active at that screen size.  
+4. Check If External CSS is Loaded  
+Go to the Network tab.  
+Reload the page (F5 or right-click → reload).  
+In the filter bar, type styles.css (or your stylesheet name).  
+Make sure:  
+The Status is 200 (OK).  
+The Type is text/css.  
+Click the file to view its contents and confirm it’s not empty or 404’d. 

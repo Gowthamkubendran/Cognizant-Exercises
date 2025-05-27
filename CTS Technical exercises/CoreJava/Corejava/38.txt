@@ -1,0 +1,9 @@
+D:>java -jar cfr-0.152.jar HelloWorld.class
+/*
+ * Decompiled with CFR 0.152.
+ */
+public class HelloWorld {
+    public static void main(String[] stringArray) {
+        System.out.println("Hello,World!");
+    }
+}

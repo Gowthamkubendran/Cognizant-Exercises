@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Debuggable Event Registration</title>
+  <style>
+    form {
+      max-width: 400px;
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .success {
+      color: green;
+    }
+    .error {
+      color: red;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 12px;
+      padding: 8px 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Register for an Event</h1>
+  <form id="registrationForm" novalidate>
+    <label>
+      Name:
+      <input type="text" name="name" required />
+    </label>
+
+    <label>
+      Email:
+      <input type="email" name="email" required />
+    </label>
+
+    <label>
+      Select Event:
+      <select name="event" required>
+        <option value="">-- Select an event --</option>
+        <option value="Community Clean-Up">Community Clean-Up</option>
+        <option value="Yoga Workshop">Yoga Workshop</option>
+        <option value="Rock Concert">Rock Concert</option>
+      </select>
+    </label>
+
+    <button type="submit">Register</button>
+  </form>
+
+  <div id="message" class="message"></div>
+
+  <script src="ajaxRegisterDebug.js"></script>
+</body>
+</html>

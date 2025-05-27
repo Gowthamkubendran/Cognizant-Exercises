@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <title>Modern JS Features Demo</title>
+  <style>
+    .event-item {
+      border: 1px solid #888;
+      padding: 10px;
+      margin: 6px 0;
+      border-radius: 5px;
+      max-width: 400px;
+    }
+    button {
+      margin-right: 6px;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Community Events Filter</h1>
+  <div>
+    <button onclick="filterAndRender()">All</button>
+    <button onclick="filterAndRender('Music')">Music</button>
+    <button onclick="filterAndRender('Health')">Health</button>
+    <button onclick="filterAndRender('Environment')">Environment</button>
+  </div>
+
+  <div id="eventsContainer"></div>
+
+  <script src="modernJSdemo.js"></script>
+</body>
+</html>

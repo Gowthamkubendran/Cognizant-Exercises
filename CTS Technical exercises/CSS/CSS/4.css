@@ -1,0 +1,28 @@
+body {
+  background-color: #f5f5f5; 
+  background-image: url('images/cityscape.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  color: #222; /* Default text color */
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  color: rgba(0, 0, 0, 0.8);  
+}
+.section-header {
+  background: linear-gradient(to right, #007BFF, #00BFFF); 
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.alert-header {
+  background: linear-gradient(45deg, #FF6B6B, #FFD93D);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  letter-spacing: 1px;
+}

@@ -1,0 +1,42 @@
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin: 20px 0;
+  text-align: center;
+}
+
+
+#mainHeader {
+  background-color: #007BFF;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.eventCard {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+
+h3, p {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
